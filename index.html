@@ -1,7 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Against Fascism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Benton+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Benton Sans', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    header {
+      background-color: #0066a1;
+      width: 100%;
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    select {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 1.5rem;
+      padding-left: 1.25rem;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <span>Data Against Fascism</span>
+    <img src="fc7c3c6a-0f06-4763-8f4e-28e4a93af25d.png" alt="Logo" class="logo" />
+  </header>
+
+  <div class="content">
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+      <option value="zh">简体中文</option>
+    </select>
+    <p id="mainText">
+      Welcome to the Data Against Fascism Landing page. The other language translations were produced using AI, so please forgive any language issues.
+    </p>
+
+    <ul>
+      <li><strong>Disappeared Tracker:</strong> <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">View Map</a></li>
+      <li><strong>Git Repo of Disappeared Person Data</strong></li>
+      <li><strong>ICE Flights Tracker:</strong> <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">View Tracker</a></li>
+      <li><strong>Git Repo of ICE Flights Data</strong></li>
+      <li><strong>To anonymously submit a person to the tracker use the secure tipline at:</strong> <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a></li>
+      <li><strong>To contact via Signal app:</strong> DisappearedTracker.2025</li>
+      <li><strong>For immigration resources:</strong> <a href="#">Click here</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const translations = {
+      en: "Welcome to the Data Against Fascism Landing page. The other language translations were produced using AI, so please forgive any language issues.",
+      es: "Bienvenido a la página de inicio de Data Against Fascism. Las otras traducciones fueron producidas usando IA, así que por favor disculpe cualquier error de idioma.",
+      fr: "Bienvenue sur la page d'accueil de Data Against Fascism. Les autres traductions ont été produites par une IA, veuillez excuser toute erreur de langue.",
+      de: "Willkommen auf der Startseite von Data Against Fascism. Die anderen Übersetzungen wurden von einer KI erstellt, bitte entschuldigen Sie eventuelle Sprachfehler.",
+      ar: "مرحبًا بكم في الصفحة الرئيسية لـ Data Against Fascism. تم إنتاج الترجمات الأخرى باستخدام الذكاء الاصطناعي، لذا يرجى المعذرة عن أي أخطاء لغوية.",
+      hi: "डेटा अगेंस्ट फासिज्म लैंडिंग पेज में आपका स्वागत है। अन्य भाषाओं के अनुवाद एआई का उपयोग करके किए गए थे, इसलिए कृपया किसी भी भाषा संबंधी त्रुटियों के लिए क्षमा करें।",
+      zh: "欢迎来到 Data Against Fascism 的登录页面。其他语言的翻译是使用 AI 生成的，因此如果有任何语言问题，请见谅。"
+    };
+
+    function changeLanguage() {
+      const selectedLang = document.getElementById('languageSelect').value;
+      document.getElementById('mainText').textContent = translations[selectedLang];
+    }
+  </script>
 </body>
 </html>
+
