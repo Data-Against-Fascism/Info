@@ -74,37 +74,192 @@
       <option value="ar">العربية</option>
       <option value="hi">हिन्दी</option>
       <option value="zh">简体中文</option>
+      <option value="vt">Tiếng Việt</option>
+      <option value="hg">Hmoob</option>
+      <option value="hg">Tagalog</option>
+      <option value="kr">한국인</option>
+      <option value="pr">Português</option>
+     
     </select>
-    <p id="mainText">
-      Welcome to the Data Against Fascism Landing page. The other language translations were produced using AI, so please forgive any language issues.
-    </p>
-
-    <ul>
-      <li><strong>Disappeared Tracker:</strong> <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">View Map</a></li>
-      <li><strong>Git Repo of Disappeared Person Data:</strong> <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a></li>
-      <li><strong>ICE Flights Tracker:</strong> <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">View Tracker</a></li>
-      <li><strong>Git Repo of ICE Flights Data:</strong> <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a></li>
-      <li><strong>To anonymously submit a person to the tracker use the secure tipline at:</strong> <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a></li>
-      <li><strong>To contact via Signal app:</strong> DisappearedTracker.2025</li>
-      <li><strong>For immigration resources:</strong> <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Click here</a></li>
-    </ul>
+    <p id="mainText"></p>
+    <ul id="resourceList"></ul>
   </div>
 
   <script>
     const translations = {
-      en: "Welcome to the Data Against Fascism Landing page. The other language translations were produced using AI, so please forgive any language issues.",
-      es: "Bienvenido a la página de inicio de Data Against Fascism. Las otras traducciones fueron producidas usando IA, así que por favor disculpe cualquier error de idioma.",
-      fr: "Bienvenue sur la page d'accueil de Data Against Fascism. Les autres traductions ont été produites par une IA, veuillez excuser toute erreur de langue.",
-      de: "Willkommen auf der Startseite von Data Against Fascism. Die anderen Übersetzungen wurden von einer KI erstellt, bitte entschuldigen Sie eventuelle Sprachfehler.",
-      ar: "مرحبًا بكم في الصفحة الرئيسية لـ Data Against Fascism. تم إنتاج الترجمات الأخرى باستخدام الذكاء الاصطناعي، لذا يرجى المعذرة عن أي أخطاء لغوية.",
-      hi: "डेटा अगेंस्ट फासिज्म लैंडिंग पेज में आपका स्वागत है। अन्य भाषाओं के अनुवाद एआई का उपयोग करके किए गए थे, इसलिए कृपया किसी भी भाषा संबंधी त्रुटियों के लिए क्षमा करें।",
-      zh: "欢迎来到 Data Against Fascism 的登录页面。其他语言的翻译是使用 AI 生成的，因此如果有任何语言问题，请见谅。"
+      en: {
+        main: "Welcome to the Data Against Fascism Landing page. The other language translations were produced using AI, so please forgive any language issues.",
+        list: [
+          'Disappeared Tracker: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">View Map</a>',
+          'Git Repo of Disappeared Person Data: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+          'ICE Flights Tracker: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">View Tracker</a>',
+          'Git Repo of ICE Flights Data: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+          'To anonymously submit a person to the tracker use the secure tipline at: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+          'To contact via Signal app: DisappearedTracker.2025',
+          'For immigration resources: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Click here</a>'
+        ]
+      },
+      es: {
+        main: "Bienvenido a la página de inicio de Data Against Fascism. Las otras traducciones fueron producidas usando IA, así que por favor disculpe cualquier error de idioma.",
+        list: [
+          'Rastreador de desaparecidos: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">Ver mapa</a>',
+          'Repositorio Git de datos de personas desaparecidas: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+          'Rastreador de vuelos de ICE: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">Ver rastreador</a>',
+          'Repositorio Git de datos de vuelos de ICE: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+          'Para enviar anónimamente a una persona al rastreador use: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+          'Para contactar a través de Signal: DisappearedTracker.2025',
+          'Para recursos de inmigración: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Haga clic aquí</a>'
+        ]
+      },
+      fr: {
+        main: "Bienvenue sur la page d'accueil de Data Against Fascism. Les autres traductions ont été produites par une IA, veuillez excuser toute erreur de langue.",
+        list: [
+          'Suivi des disparus: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">Voir la carte</a>',
+          'Dépôt Git des données de personnes disparues: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+          'Suivi des vols ICE: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">Voir le suivi</a>',
+          'Dépôt Git des données de vols ICE: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+          'Soumettre anonymement une personne: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+          'Contacter via Signal: DisappearedTracker.2025',
+          'Ressources en immigration: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Cliquez ici</a>'
+        ]
+      },
+      de: {
+        main: "Willkommen auf der Data Against Fascism-Startseite. Die anderen Übersetzungen wurden mit KI erstellt. Bitte entschuldigen Sie etwaige Sprachfehler.",
+        list: [
+          'Vermissten-Tracker: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">Karte anzeigen</a>',
+          'Git-Repo der vermissten Personen: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+          'ICE-Flugtracker: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">Tracker anzeigen</a>',
+          'Git-Repo der ICE-Flugdaten: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+          'Um eine Person anonym einzureichen: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+          'Kontakt via Signal-App: DisappearedTracker.2025',
+          'Ressourcen zur Einwanderung: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Klicken Sie hier</a>'
+        ]
+      },
+      ar: {
+        main: "مرحبًا بكم في صفحة الهبوط لـ 'البيانات ضد الفاشية'. تمت ترجمة اللغات الأخرى باستخدام الذكاء الاصطناعي، لذا نرجو المعذرة في حال وجود أي أخطاء لغوية.",
+list: [
+  'متعقب المفقودين: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">عرض الخريطة</a>',
+  'مستودع بيانات الأشخاص المفقودين على Git: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'متعقب رحلات ICE: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">عرض المتعقب</a>',
+  'مستودع بيانات رحلات ICE على Git: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  'لإرسال بلاغ عن شخص مفقود بشكل مجهول، استخدم خط البلاغ الآمن عبر: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  'للتواصل عبر تطبيق Signal: DisappearedTracker.2025',
+  'للحصول على موارد الهجرة: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">اضغط هنا</a>'
+]
+        
+      },
+      zh: {
+        main: "欢迎来到“反对法西斯主义的数据”登录页面。其他语言的翻译是通过人工智能生成的，如有语言问题，敬请谅解。",
+list: [
+  '失踪人员追踪器：<a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">查看地图</a>',
+  '失踪人员数据的 Git 仓库：<a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'ICE 航班追踪器：<a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">查看追踪器</a>',
+  'ICE 航班数据的 Git 仓库：<a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  '要匿名提交失踪人员信息，请使用安全举报平台：<a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  '通过 Signal 应用联系：DisappearedTracker.2025',
+  '移民资源：<a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">点击这里</a>'
+]
+        
+      },
+
+      hi: {
+        main: "फासीवाद के खिलाफ डेटा लैंडिंग पृष्ठ में आपका स्वागत है। अन्य भाषाओं के अनुवाद एआई की सहायता से किए गए हैं, कृपया किसी भी भाषा संबंधी त्रुटियों के लिए क्षमा करें।",
+list: [
+  'लापता व्यक्ति ट्रैकर: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">नक्शा देखें</a>',
+  'लापता व्यक्ति डेटा का Git रिपॉजिटरी: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'ICE उड़ान ट्रैकर: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">ट्रैकर देखें</a>',
+  'ICE उड़ानों के डेटा का Git रिपॉजिटरी: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  'किसी व्यक्ति को गुमनाम रूप से ट्रैकर में जोड़ने के लिए इस सुरक्षित टिपलाइन का उपयोग करें: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  'Signal ऐप के माध्यम से संपर्क करें: DisappearedTracker.2025',
+  'प्रवासन संसाधनों के लिए: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">यहाँ क्लिक करें</a>'
+]
+      },
+
+      vt: {
+        main: "Chào mừng bạn đến với trang chủ của Dữ Liệu Chống Phát Xít. Các bản dịch sang ngôn ngữ khác được tạo bằng trí tuệ nhân tạo, xin vui lòng thông cảm nếu có vấn đề về ngôn ngữ.",
+list: [
+  'Trình theo dõi người mất tích: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">Xem bản đồ</a>',
+  'Kho dữ liệu Git về người mất tích: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'Trình theo dõi các chuyến bay của ICE: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">Xem trình theo dõi</a>',
+  'Kho dữ liệu Git về các chuyến bay của ICE: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  'Để ẩn danh gửi thông tin một người vào trình theo dõi, hãy sử dụng đường dây báo tin bảo mật tại: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  'Liên hệ qua ứng dụng Signal: DisappearedTracker.2025',
+  'Tài nguyên về nhập cư: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Nhấn vào đây</a>'
+]
+      },
+
+      hg: {
+        main: "Zoo siab tos txais rau nplooj ntawv 'Cov Ntaub Ntawv Tiv Thaiv Kev Cai Txwv Neeg'. Cov lus txhais rau lwm yam lus yog tsim los ntawm AI, thov zam txim yog muaj teeb meem lus.",
+list: [
+  'Tus Neeg Ploj Tracker: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">Saib Daim Phiaj</a>',
+  'Git Repo rau cov ntaub ntawv ntawm cov neeg ploj: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'ICE Davhlau Tracker: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">Saib Kev Taug</a>',
+  'Git Repo rau cov ntaub ntawv ICE davhlau: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  'Yog koj xav qhia ib tus neeg ploj yam tsis qhia npe, siv qhov chaw ceeb toom nyab xeeb no: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  'Tiv tauj los ntawm Signal app: DisappearedTracker.2025',
+  'Rau cov peev txheej txog kev tsiv teb tsaws chaw: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Nyem Ntawm No</a>'
+]
+      },
+
+      tg: {
+        main: "Maligayang pagdating sa pahina ng Data Laban sa Pasisismo. Ang ibang salin sa wika ay ginawa gamit ang AI, kaya't patawarin na lamang kung may mga pagkakamali sa pagsasalin.",
+list: [
+  'Tagasubaybay ng Nawawala: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">Tingnan ang Mapa</a>',
+  'Git Repo ng Datos ng Nawawalang Tao: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'Tagasubaybay ng mga Lipad ng ICE: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">Tingnan ang Tracker</a>',
+  'Git Repo ng Datos ng mga Lipad ng ICE: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  'Upang hindi makilala sa pagsusumite ng tao sa tracker, gamitin ang ligtas na tipline: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  'Para makipag-ugnayan gamit ang Signal app: DisappearedTracker.2025',
+  'Para sa mga mapagkukunan ukol sa imigrasyon: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Mag-click dito</a>'
+]
+      },
+
+      kr: {
+        main: "파시즘에 맞서는 데이터 랜딩 페이지에 오신 것을 환영합니다. 다른 언어 번역은 인공지능을 사용하여 생성되었으므로, 언어 오류가 있을 수 있는 점 양해 부탁드립니다.",
+list: [
+  '실종자 추적기: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">지도 보기</a>',
+  '실종자 데이터 Git 저장소: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'ICE 항공편 추적기: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">추적기 보기</a>',
+  'ICE 항공편 데이터 Git 저장소: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  '익명으로 실종자를 등록하려면 보안 제보 라인을 이용하세요: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  'Signal 앱으로 연락하기: DisappearedTracker.2025',
+  '이민 관련 자료: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">여기를 클릭하세요</a>'
+]
+      },
+      pr: {
+        main: "Bem-vindo à página inicial do Dados Contra o Fascismo. As traduções para outros idiomas foram feitas com IA, portanto, pedimos desculpas por quaisquer problemas linguísticos.",
+list: [
+  'Rastreador de Desaparecidos: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/UnitedStatesDisappearedTracker/Map" target="_blank">Ver Mapa</a>',
+  'Repositório Git dos Dados de Pessoas Desaparecidas: <a href="https://github.com/danielleharlow/DisappearedPersons" target="_blank">GitHub</a>',
+  'Rastreador de Voos da ICE: <a href="https://public.tableau.com/app/profile/danielleharlow/viz/ICEFlightsTracker/ICEFlights" target="_blank">Ver Rastreador</a>',
+  'Repositório Git dos Dados de Voos da ICE: <a href="https://github.com/danielleharlow/ICEFlights" target="_blank">GitHub</a>',
+  'Para enviar anonimamente uma pessoa ao rastreador, use a linha segura de denúncias em: <a href="https://tips.hushline.app/to/DisappearedTracker" target="_blank">HushLine</a>',
+  'Para entrar em contato via aplicativo Signal: DisappearedTracker.2025',
+  'Para recursos de imigração: <a href="https://immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank">Clique aqui</a>'
+]
+      },
+
+
     };
 
     function changeLanguage() {
-      const selectedLang = document.getElementById('languageSelect').value;
-      document.getElementById('mainText').textContent = translations[selectedLang];
+      const lang = document.getElementById('languageSelect').value;
+      const mainText = document.getElementById('mainText');
+      const resourceList = document.getElementById('resourceList');
+      const content = translations[lang] || translations['en'];
+
+      mainText.textContent = content.main;
+
+      resourceList.innerHTML = '';
+      content.list.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = item;
+        resourceList.appendChild(li);
+      });
     }
+
+    // Set initial language
+    window.onload = changeLanguage;
   </script>
 </body>
 </html>
